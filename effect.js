@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	// Isse website bina ruke turant chalu ho jayegi
 	$('.loading').fadeOut('fast');
 	$('.container').fadeIn('fast');
 
@@ -165,13 +164,19 @@ $(document).ready(function(){
 			$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
 				i=i+1;
 				$("p:nth-child("+i+")").fadeIn('slow').delay(4000);
-				if(i==9){
+				if(i==11){ // Total 10 lines hain toh 11 par aakar end hoga
 					$("p:nth-child("+i+")").fadeIn('slow');
+					$('#party_demand_btn').fadeIn('slow'); // Aakhiri me party demand wala red button khulega
 				} else {
 					msgLoop(i);
 				}
 			});
 		}
 		msgLoop(i);
+	});
+
+	// Party button click karne par pop-up message
+	$('#party_demand_btn').click(function(){
+		alert("Aditya, ab bahane nahi chalenge! Website poori dekh li hai, ab jaldi se Party do! 🍕🎉🍻");
 	});
 });
