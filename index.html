@@ -13,11 +13,22 @@
 	<link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+	
+	<style>
+		.navbar-fixed-bottom {
+			z-index: 99999 !important;
+		}
+		.btn-primary {
+			margin: 5px;
+			font-weight: bold;
+		}
+	</style>
 </head>
 
 <body>
 	<div class="loading"></div>
-	<audio class="song" controls loop>
+	
+	<audio class="song" controls loop style="display:none;">
 		<source src="hbd.mp3"></source>
 	</audio>
 
